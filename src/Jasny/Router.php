@@ -802,7 +802,7 @@ class Router
      */
     protected static function outputErrorImage($format=null, $error=null)
     {
-        if (!isset($format)) $format = $this->getAcceptFormat();
+        if (!isset($format)) $format = static::getAcceptFormat();
         
         $image = imagecreate(100, 100);
         $black = imagecolorallocate($image, 0, 0, 0);
